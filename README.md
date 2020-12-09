@@ -12,7 +12,7 @@
 
 ### clone to your local directory
 ```
-git clone [git@github.com:yudanta/diterawang.git](https://github.com/yudanta/diterawang.git)
+git clone https://github.com/yudanta/diterawang.git
 ```
 ### local via venv 
 ```
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 # run directly using python3 
 python3 run.py
 
-# run from uwsgi 
+# run from gunicorn 
 gunicorn app:app 
 ```
 
