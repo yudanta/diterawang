@@ -35,3 +35,4 @@ docker-compose up --build
 curl -X POST -H "Content-Type: multipart/form-data" http://localhost:8000/predict -F "file=@test_img/cat_1.jpg"  > cat.json
 ```
 
+atau bisa dicoba juga sih di heroku, sila menuju ke: https://diterawang.herokuapp.com
