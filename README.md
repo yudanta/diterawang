@@ -1,15 +1,25 @@
-## running project or deployment 
+# Diterawang, yet another image classification api
+## Stacks 
+- Pytorch 
+- flask
+- gunicorn
 
-## clone 
+## Model 
+- densenet121, pretrained model on ImageNet dataset
+- ImageNet class data category
+
+## to run this project or to deploy with docker
+
+### clone to your local directory
 ```
-git clone <url>
+git clone [git@github.com:yudanta/diterawang.git](https://github.com/yudanta/diterawang.git)
 ```
-## local via venv 
+### local via venv 
 ```
 # create virtual env 
-python3 -m venv imageapi
+python3 -m venv diterawang
 
-cd imageapi
+cd diterawang
 
 # activate venv 
 source bin/activate 
@@ -24,15 +34,19 @@ python3 run.py
 gunicorn app:app 
 ```
 
-## docker-compose
+### via docker-compose
 ```
 docker-compose up --build
 ```
 
 
-## testing via curl 
+## testing via curl command
+there are several images for testing purpose inside test_img directory, to perform classification request using curl command:
 ```
 curl -X POST -H "Content-Type: multipart/form-data" http://localhost:8000/predict -F "file=@test_img/cat_1.jpg"  > cat.json
 ```
 
+
+## Online Demo
 atau bisa dicoba juga sih di heroku, sila menuju ke: https://diterawang.herokuapp.com
+
